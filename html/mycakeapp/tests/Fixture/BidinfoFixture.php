@@ -31,7 +31,7 @@ class BidinfoFixture extends TestFixture
         ],
         '_options' => [
             'engine' => 'InnoDB',
-            'collation' => 'utf8_general_ci'
+            'collation' => 'utf8_unicode_ci'
         ],
     ];
     // @codingStandardsIgnoreEnd
@@ -48,7 +48,7 @@ class BidinfoFixture extends TestFixture
                 'biditem_id' => 1,
                 'user_id' => 1,
                 'price' => 1,
-                'created' => '2020-06-03 02:28:42',
+                'created' => '2020-11-26 20:23:38',
             ],
         ];
         parent::init();

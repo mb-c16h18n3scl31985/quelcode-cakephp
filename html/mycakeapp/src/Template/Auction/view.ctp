@@ -1,4 +1,4 @@
-<h2>「<?= $biditem->name ?>」の情報</h2>
+<h2>「<?=$biditem->name ?> 」の情報</h2>
 <table class="vertical-table">
 <tr>
 	<th class="small" scope="row">出品者</th>
