@@ -1,78 +1,78 @@
-<mxfile host="65bd71144e" modified="2020-11-29T09:45:44.753Z" agent="5.0 (Macintosh; Intel Mac OS X 10_16_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.1 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" version="13.6.5" etag="KmnPEbqeeuQ92iSusSZY">
+<mxfile host="65bd71144e" modified="2020-11-30T04:29:52.216Z" agent="5.0 (Macintosh; Intel Mac OS X 10_16_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.1 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" etag="ij7LofVZ_KXKU0uQ3imS" version="13.6.5">
     <diagram id="gVeel7UcXJgCGZEXeLvJ" name="ページ1">
         <mxGraphModel dx="845" dy="731" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="46" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="44" target="45">
+                <mxCell id="46" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="44" target="45" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="44" value="開始" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;arcSize=50;" vertex="1" parent="1">
-                    <mxGeometry x="210" y="60" width="120" height="40" as="geometry"/>
+                <mxCell id="44" value="開始" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;arcSize=50;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="60" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="86" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="45" target="47">
+                <mxCell id="86" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="45" target="47" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="45" value="出品画面へアクセス" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="1">
-                    <mxGeometry x="210" y="130" width="120" height="40" as="geometry"/>
+                <mxCell id="45" value="出品画面へアクセス" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="130" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="56" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="47" target="48">
+                <mxCell id="56" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="47" target="48" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="47" value="商品情報の入力" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="1">
-                    <mxGeometry x="210" y="200" width="120" height="40" as="geometry"/>
+                <mxCell id="47" value="商品情報の入力" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="200" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="61" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="48" target="49">
+                <mxCell id="61" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="48" target="49" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="48" value="submitボタン押下" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="1">
-                    <mxGeometry x="210" y="270" width="120" height="40" as="geometry"/>
+                <mxCell id="48" value="submitボタン押下" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="270" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="62" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="49" target="50">
+                <mxCell id="62" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="49" target="50" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="65" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="49" target="57">
+                <mxCell id="65" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="49" target="57" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="63" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="50" target="51">
+                <mxCell id="63" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="50" target="51" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="66" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="50" target="58">
+                <mxCell id="66" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="50" target="58" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="50" value="詳細説明は&lt;br&gt;1000文字以内か" style="rhombus;whiteSpace=wrap;html=1;rounded=0;sketch=0;" vertex="1" parent="1">
+                <mxCell id="50" value="詳細説明は&lt;br&gt;1000文字以内か" style="rhombus;whiteSpace=wrap;html=1;rounded=0;sketch=0;" parent="1" vertex="1">
                     <mxGeometry x="445" y="350" width="130" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="64" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="51" target="52">
+                <mxCell id="64" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="51" target="52" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="67" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="51" target="59">
+                <mxCell id="67" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="51" target="59" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="51" value="商品画像は&lt;br&gt;2MB以内か" style="rhombus;whiteSpace=wrap;html=1;rounded=0;sketch=0;" vertex="1" parent="1">
+                <mxCell id="51" value="商品画像は&lt;br&gt;2MB以内か" style="rhombus;whiteSpace=wrap;html=1;rounded=0;sketch=0;" parent="1" vertex="1">
                     <mxGeometry x="445" y="450" width="130" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="68" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="52" target="60">
+                <mxCell id="68" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="52" target="60" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="102" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="52" target="93">
+                <mxCell id="102" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="52" target="93" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="103" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="52" target="92">
+                <mxCell id="103" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="52" target="92" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="52" value="商品画像の形式が&lt;br&gt;.jpg/.jpeg/.gif/.pngの&lt;br&gt;いずれかに&lt;br&gt;当てはまるか" style="rhombus;whiteSpace=wrap;html=1;rounded=0;sketch=0;" vertex="1" parent="1">
+                <mxCell id="52" value="商品画像の形式が&lt;br&gt;.jpg/.jpeg/.gif/.pngの&lt;br&gt;いずれかに&lt;br&gt;当てはまるか" style="rhombus;whiteSpace=wrap;html=1;rounded=0;sketch=0;" parent="1" vertex="1">
                     <mxGeometry x="430" y="550" width="160" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="55" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="53" target="87">
+                <mxCell id="55" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="53" target="87" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="270" y="1030" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="53" value="商品一覧へ遷移" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="1">
-                    <mxGeometry x="460" y="850" width="120" height="40" as="geometry"/>
+                <mxCell id="53" value="商品一覧へ遷移" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="810" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="81" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="57" target="47">
+                <mxCell id="81" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="57" target="47" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="840" y="290"/>
@@ -80,7 +80,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="100" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="58" target="47">
+                <mxCell id="100" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="58" target="47" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="840" y="385"/>
@@ -88,10 +88,10 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="58" value="エラーメッセージ" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="1">
+                <mxCell id="58" value="エラーメッセージ" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" parent="1" vertex="1">
                     <mxGeometry x="660" y="365" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="80" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="59" target="47">
+                <mxCell id="80" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="59" target="47" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="840" y="485"/>
@@ -99,10 +99,10 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="59" value="エラーメッセージ" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="1">
+                <mxCell id="59" value="エラーメッセージ" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" parent="1" vertex="1">
                     <mxGeometry x="660" y="465" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="99" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="60" target="47">
+                <mxCell id="99" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="60" target="47" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="840" y="610"/>
@@ -110,52 +110,52 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="60" value="エラーメッセージ" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="1">
+                <mxCell id="60" value="エラーメッセージ" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" parent="1" vertex="1">
                     <mxGeometry x="660" y="588.75" width="120" height="42.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="73" value="Yes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;" vertex="1" parent="1">
+                <mxCell id="73" value="Yes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;" parent="1" vertex="1">
                     <mxGeometry x="510" y="430" width="40" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="74" value="Yes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;" vertex="1" parent="1">
+                <mxCell id="74" value="Yes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;" parent="1" vertex="1">
                     <mxGeometry x="510" y="520" width="40" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="75" value="Yes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;" vertex="1" parent="1">
-                    <mxGeometry x="580" y="660" width="40" height="20" as="geometry"/>
+                <mxCell id="75" value="Yes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="670" width="40" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="76" value="Yes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;" vertex="1" parent="1">
+                <mxCell id="76" value="Yes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;" parent="1" vertex="1">
                     <mxGeometry x="510" y="322.5" width="40" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="82" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;" vertex="1" parent="1">
+                <mxCell id="82" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;" parent="1" vertex="1">
                     <mxGeometry x="575" y="265" width="40" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="83" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;" vertex="1" parent="1">
+                <mxCell id="83" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;" parent="1" vertex="1">
                     <mxGeometry x="570" y="360" width="40" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="84" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;" vertex="1" parent="1">
+                <mxCell id="84" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;" parent="1" vertex="1">
                     <mxGeometry x="570" y="460" width="40" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="85" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;" vertex="1" parent="1">
+                <mxCell id="85" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;" parent="1" vertex="1">
                     <mxGeometry x="575" y="585" width="40" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="87" value="終了" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;arcSize=50;" vertex="1" parent="1">
-                    <mxGeometry x="460" y="930" width="120" height="40" as="geometry"/>
+                <mxCell id="87" value="終了" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;arcSize=50;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="880" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="105" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="92" target="53">
+                <mxCell id="105" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="92" target="53" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="92" value="データベースに値を保存" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="1">
-                    <mxGeometry x="320" y="760" width="150" height="40" as="geometry"/>
+                <mxCell id="92" value="データベースに値を保存" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="720" width="150" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="104" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="93" target="53">
+                <mxCell id="104" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="93" target="53" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="93" value="画像を保存" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="1">
-                    <mxGeometry x="570" y="760" width="120" height="40" as="geometry"/>
+                <mxCell id="93" value="画像を保存" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="720" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="49" value="全ての項目が&lt;br&gt;入力されたか" style="rhombus;whiteSpace=wrap;html=1;rounded=0;sketch=0;" vertex="1" parent="1">
+                <mxCell id="49" value="全ての項目が&lt;br&gt;入力されたか" style="rhombus;whiteSpace=wrap;html=1;rounded=0;sketch=0;" parent="1" vertex="1">
                     <mxGeometry x="445" y="257.5" width="130" height="65" as="geometry"/>
                 </mxCell>
-                <mxCell id="57" value="エラーメッセージ" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" vertex="1" parent="1">
+                <mxCell id="57" value="エラーメッセージ" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;" parent="1" vertex="1">
                     <mxGeometry x="660" y="267.5" width="120" height="45" as="geometry"/>
                 </mxCell>
             </root>
