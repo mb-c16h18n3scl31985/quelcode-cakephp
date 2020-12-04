@@ -13,12 +13,12 @@ class AddColumnsToBiditems extends AbstractMigration
     public function change()
     {
         $table = $this->table('biditems');
-        $table->addColumn('description', 'varchar', [
+        $table->addColumn('description', 'string', [
             'default' => '',
             'limit' => 1000,
             'null' => false,
         ]);
-        $table->addColumn('image_path', 'varchar', [
+        $table->addColumn('image_path', 'string', [
             'default' => '',
             'limit' => 255,
             'null' => false,
