@@ -93,7 +93,8 @@ class BiditemsTable extends Table
 
         //商品画像
         $validator
-            ->requirePresence('image_path', '商品画像をご用意下さい。')
+            ->requirePresence('image_path')
+            ->notEmptyFile('image_path', '商品画像をご用意下さい。')
 
             //ファイルアップロード
             ->add('image_path', 'uploadError', [
