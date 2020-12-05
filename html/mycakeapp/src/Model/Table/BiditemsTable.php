@@ -84,11 +84,11 @@ class BiditemsTable extends Table
             ->notEmptyDateTime('endtime');
 
         $validator
-            ->requirePresence('create')
-            ->maxLength('description', 1000);
+            ->requirePresence('create', '商品説明をご入力下さい。')
+            ->maxLength('description', 1000, '1000文字以内でご入力下さい。');
 
         $validator
-            ->requirePresence('image_path')
+            ->requirePresence('image_path', '商品画像をご用意下さい。')
             ->add(
                 'image_path',
                 'fileSize',
