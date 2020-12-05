@@ -83,20 +83,35 @@ class BiditemsTable extends Table
             ->requirePresence('endtime', 'create')
             ->notEmptyDateTime('endtime');
 
+
+        //詳細説明
         $validator
             ->requirePresence('create', '商品説明をご入力下さい。')
             ->maxLength('description', 1000, '1000文字以内でご入力下さい。');
 
+
+        //商品画像
         $validator
             ->requirePresence('image_path', '商品画像をご用意下さい。')
+
+            //ファイルアップロード
+            ->add('image_path', 'uploadError', [
+                'rule' => ['uploadError'],
+                'message' => 'ファイルのアップロードができませんでした。もう一度お試し下さい。',
+                'last' => true
+            ])
+
+            //ファイルサイズは2MB以下
             ->add(
                 'image_path',
                 'fileSize',
                 [
-                    'rule' => ['fileSize', '<', '2000'],
+                    'rule' => ['fileSize', '<=', '2000'],
                     'message' => '2MB以下のファイルをご用意下さい。'
                 ]
             )
+
+            //拡張子のチェック
             ->add(
                 'image_path',
                 'extension',
@@ -105,6 +120,8 @@ class BiditemsTable extends Table
                     'message' => 'ファイル形式は.jpg/.jpeg/.gif/.pngいずれかでご投稿下さい'
                 ]
             )
+
+            //mimeTypeチェック
             ->add(
                 'image_path',
                 'mimeType',
