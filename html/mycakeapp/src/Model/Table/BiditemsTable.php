@@ -86,8 +86,9 @@ class BiditemsTable extends Table
 
         //詳細説明
         $validator
-            ->requirePresence('create', '商品説明をご入力下さい。')
-            ->maxLength('description', 1000, '1000文字以内でご入力下さい。');
+            ->requirePresence('create')
+            ->maxLength('description', 1000, '1000文字以内でご入力下さい。')
+            ->notEmptyString('description', '商品説明をご入力下さい。');
 
 
         //商品画像
