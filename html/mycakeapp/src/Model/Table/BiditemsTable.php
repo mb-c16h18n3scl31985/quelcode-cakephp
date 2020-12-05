@@ -104,6 +104,14 @@ class BiditemsTable extends Table
                     'rule' => ['extension', ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG', 'gif', 'GIF']],
                     'message' => 'ファイル形式は.jpg/.jpeg/.gif/.pngいずれかでご投稿下さい'
                 ]
+            )
+            ->add(
+                'image_path',
+                'mimeType',
+                [
+                    'rule' => ['mimeType', ['image/jpeg', 'image/png', 'image/gif']],
+                    'message' => 'ファイル形式は.jpg/.jpeg/.gif/.pngいずれかでご投稿下さい',
+                ]
             );
 
 
