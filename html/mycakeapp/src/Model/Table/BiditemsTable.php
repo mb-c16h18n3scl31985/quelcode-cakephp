@@ -104,34 +104,22 @@ class BiditemsTable extends Table
             ])
 
             //ファイルサイズは2MB以下
-            ->add(
-                'image_path',
-                'fileSize',
-                [
-                    'rule' => ['fileSize', '<=', '2000'],
-                    'message' => '2MB以下のファイルをご用意下さい。'
-                ]
-            )
+            ->add('image_path', 'fileSize', [
+                'rule' => ['fileSize', '<=', '2000'],
+                'message' => '2MB以下のファイルをご用意下さい。'
+            ])
 
             //拡張子のチェック
-            ->add(
-                'image_path',
-                'extension',
-                [
-                    'rule' => ['extension', ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG', 'gif', 'GIF']],
-                    'message' => 'ファイル形式は.jpg/.jpeg/.gif/.pngいずれかでご投稿下さい'
-                ]
-            )
+            ->add('image_path', 'extension', [
+                'rule' => ['extension', ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG', 'gif', 'GIF']],
+                'message' => 'ファイル形式は.jpg/.jpeg/.gif/.pngいずれかでご投稿下さい'
+            ])
 
             //mimeTypeチェック
-            ->add(
-                'image_path',
-                'mimeType',
-                [
-                    'rule' => ['mimeType', ['image/jpeg', 'image/png', 'image/gif']],
-                    'message' => 'ファイル形式は.jpg/.jpeg/.gif/.pngいずれかでご投稿下さい',
-                ]
-            );
+            ->add('image_path', 'mimeType', [
+                'rule' => ['mimeType', ['image/jpeg', 'image/png', 'image/gif']],
+                'message' => 'ファイル形式は.jpg/.jpeg/.gif/.pngいずれかでご投稿下さい',
+            ]);
 
 
         return $validator;
