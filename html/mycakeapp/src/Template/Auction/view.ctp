@@ -1,5 +1,7 @@
 <h2>「<?= $biditem->name ?> 」の情報</h2>
-<img src="<?= $biditem->image_path ?>" alt="<?= $this->name ?>" class="biditem_image">
+<div class="text-align-center">
+    <img src="<?= $biditem->image_path ?>" alt="<?= h($biditem->name) ?>" class="biditem_image">
+</div>
 <table class="vertical-table">
     <tr>
         <th class="small" scope="row">出品者</th>

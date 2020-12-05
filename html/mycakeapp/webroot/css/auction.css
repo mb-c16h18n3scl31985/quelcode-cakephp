@@ -25,3 +25,10 @@ table tr th.small {
 nav.sidebar {
 	background:#f6f6ff;
 }
+img.biditem_image {
+    max-width: 500px;
+    max-height: 500px;
+}
+div.text-align-center{
+    text-align: center;
+}
