@@ -96,6 +96,14 @@ class BiditemsTable extends Table
                     'rule' => ['fileSize', '<', '2000'],
                     'message' => '2MB以下のファイルをご用意下さい。'
                 ]
+            )
+            ->add(
+                'image_path',
+                'extension',
+                [
+                    'rule' => ['extension', ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG', 'gif', 'GIF']],
+                    'message' => 'ファイル形式は.jpg/.jpeg/.gif/.pngいずれかでご投稿下さい'
+                ]
             );
 
 
