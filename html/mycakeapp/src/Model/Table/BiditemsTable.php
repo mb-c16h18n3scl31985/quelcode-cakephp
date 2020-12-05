@@ -71,7 +71,7 @@ class BiditemsTable extends Table
             ->scalar('name')
             ->maxLength('name', 100)
             ->requirePresence('name', 'create')
-            ->notEmptyString('name');
+            ->notEmptyString('name', '全ての項目をご入力下さい。');
 
         $validator
             ->boolean('finished')
@@ -81,13 +81,13 @@ class BiditemsTable extends Table
         $validator
             ->dateTime('endtime')
             ->requirePresence('endtime', 'create')
-            ->notEmptyDateTime('endtime');
+            ->notEmptyDateTime('endtime', '全ての項目をご入力下さい。');
 
 
         //詳細説明
         $validator
             ->requirePresence('create')
-            ->maxLength('description', 1000, '1000文字以内でご入力下さい。')
+            ->maxLength('description', 1000, '1,000文字以内でご入力下さい。')
             ->notEmptyString('description', '商品説明をご入力下さい。');
 
 
