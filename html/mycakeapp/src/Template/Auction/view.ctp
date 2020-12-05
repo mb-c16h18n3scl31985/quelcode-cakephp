@@ -27,6 +27,10 @@
         <th scope="row"><?= __('終了した？') ?></th>
         <td><?= $biditem->finished ? __('Yes') : __('No'); ?></td>
     </tr>
+    <tr>
+        <th scope="row">詳細説明</th>
+        <td><?= $biditem->description ?></td>
+    </tr>
 </table>
 <div class="related">
     <h4><?= __('落札情報') ?></h4>
