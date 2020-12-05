@@ -87,6 +87,18 @@ class BiditemsTable extends Table
             ->requirePresence('create')
             ->maxLength('description', 1000);
 
+        $validator
+            ->requirePresence('image_path')
+            ->add(
+                'image_path',
+                'fileSize',
+                [
+                    'rule' => ['fileSize', '<', '2000'],
+                    'message' => '2MB以下のファイルをご用意下さい。'
+                ]
+            );
+
+
         return $validator;
     }
 
