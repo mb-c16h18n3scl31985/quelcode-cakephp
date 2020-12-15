@@ -86,7 +86,7 @@ class AuctionController extends AuctionBaseController
         }
 
         //入札情報Bidrequestsからbiditem_idが$idのものを取得
-        $bidrequets = $this->Bidrequests->find('all', [
+        $bidrequests = $this->Bidrequests->find('all', [
             'conditions' => ['biditem_id' => $id],
             'contain' => ['Users'],
             'order' => ['price' => 'desc']
@@ -97,14 +97,33 @@ class AuctionController extends AuctionBaseController
     }
 
 
+    //フォームから送信された値を保存する
     public function add()
     {
         //Biditemインスタンスを用意
         $biditem = $this->Biditems->newEntity();
 
         if ($this->request->is('post')) {
-            //$biditemにフォームの送信内容を反映
-            $biditem = $this->Biditems->patchEntity($biditem, $this->request->getData());
+            //イメージファイルをcakePHP側に保存
+
+            //イメージファイル取り出し
+            $file = $this->request->data['image'];
+
+            $file_name = uniqid($file['name']);
+            $file_path = WWW_ROOT . 'img/biditem_image/' . $file_name;
+            move_uploaded_file($file['tmp_name'], $file_path);
+
+            $data = [
+                'name' => $this->request->getData('name'),
+                'endtime' => $this->request->getData('endtime'),
+                'description' => $this->request->getData('description'),
+                'image_path' => $file_name,
+                'finished' => 0,
+                'user_id' => $this->request->getData('user_id')
+            ];
+
+            //Formからの送信内容をデータベースに保存
+            $biditem = $this->Biditems->patchEntity($biditem, $data);
 
             //$biditemを保存する
             if ($this->Biditems->save($biditem)) {
@@ -115,7 +134,6 @@ class AuctionController extends AuctionBaseController
         }
         $this->set(compact('biditem'));
     }
-
 
     //入札
     public function bid($biditem_id = null)
@@ -142,6 +160,8 @@ class AuctionController extends AuctionBaseController
         $biditem = $this->Biditems->get($biditem_id);
         $this->set(compact('bidrequest', 'biditem'));
     }
+
+
 
     public function msg($bidinfo_id = null)
     {
@@ -177,6 +197,7 @@ class AuctionController extends AuctionBaseController
     }
 
 
+
     //落札情報の表示
     public function home()
     {
@@ -189,6 +210,7 @@ class AuctionController extends AuctionBaseController
         ])->toArray();
         $this->set(compact('bidinfo'));
     }
+
 
 
     //出品情報の表示
