@@ -1,6 +1,6 @@
 <h2>「<?= $biditem->name ?> 」の情報</h2>
 <div class="text-align-center">
-    <img src="<?= $biditem->image_path ?>" alt="<?= h($biditem->name) ?>" class="biditem_image">
+    <?= $this->Html->image('biditem_image/' . $biditem->image_path, ['alt' => h($biditem->name)]); ?>
 </div>
 <table class="vertical-table">
     <tr>
