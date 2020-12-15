@@ -109,7 +109,7 @@ class AuctionController extends AuctionBaseController
             //イメージファイル取り出し
             $file = $this->request->data['image'];
 
-            $file_name = uniqid($file['name']);
+            $file_name = date('YmdHis') . $file['name'];
             $file_path = WWW_ROOT . 'img/biditem_image/' . $file_name;
             move_uploaded_file($file['tmp_name'], $file_path);
 
