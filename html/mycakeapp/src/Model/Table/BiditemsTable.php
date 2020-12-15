@@ -86,7 +86,7 @@ class BiditemsTable extends Table
 
         //詳細説明
         $validator
-            ->requirePresence('create')
+            ->requirePresence('description')
             ->maxLength('description', 1000, '1,000文字以内でご入力下さい。')
             ->notEmptyString('description', '商品説明をご入力下さい。');
 
@@ -94,34 +94,29 @@ class BiditemsTable extends Table
         //商品画像
         $validator
             ->requirePresence('image_path')
-            ->notEmptyFile('image_path', '商品画像をご用意下さい。')
-
-            //ファイルアップロード
-            ->add('image_path', 'uploadError', [
-                'rule' => ['uploadError'],
-                'message' => 'ファイルのアップロードができませんでした。もう一度お試し下さい。',
-                'last' => true
-            ])
-
-            //ファイルサイズは2MB以下
-            ->add('image_path', 'fileSize', [
-                'rule' => ['fileSize', '<=', '2000'],
-                'message' => '2MB以下のファイルをご用意下さい。'
-            ])
-
-            //拡張子のチェック
-            ->add('image_path', 'extension', [
-                'rule' => ['extension', ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG', 'gif', 'GIF']],
-                'message' => 'ファイル形式は.jpg/.jpeg/.gif/.pngいずれかでご投稿下さい'
-            ])
-
-            //mimeTypeチェック
-            ->add('image_path', 'mimeType', [
-                'rule' => ['mimeType', ['image/jpeg', 'image/png', 'image/gif']],
-                'message' => 'ファイル形式は.jpg/.jpeg/.gif/.pngいずれかでご投稿下さい',
-            ]);
-
-
+            ->notEmptyFile('image_path', '商品画像をご用意下さい。');
+        // ->add(
+        //     'image_path',
+        //     [
+        //         'uploadError' => [
+        //             'rule' => ['uploadError'],
+        //             'message' => 'ファイルのアップロードができませんでした。もう一度お試し下さい。',
+        //             'last' => true
+        //         ],
+        //         'fileSize' => [
+        //             'rule' => ['fileSize', '<=', '2000'],
+        //             'message' => '2MB以下のファイルをご用意下さい。'
+        //         ],
+        //         'extension' => [
+        //             'rule' => ['extension', ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG', 'gif', 'GIF']],
+        //             'message' => 'ファイル形式は.jpg/.jpeg/.gif/.pngいずれかでご投稿下さい'
+        //         ],
+        //         'mimeType' => [
+        //             'rule' => ['mimeType', ['image/jpeg', 'image/png', 'image/gif']],
+        //             'message' => 'ファイル形式は.jpg/.jpeg/.gif/.pngいずれかでご投稿下さい',
+        //         ]
+        //     ]
+        // );
         return $validator;
     }
 
