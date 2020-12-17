@@ -7,6 +7,7 @@ use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
+
 /**
  * Biditems Model
  *
@@ -92,31 +93,11 @@ class BiditemsTable extends Table
 
 
         //商品画像
+        //画像ファイルの保存前チェックはAuctionController.phpで行う
         $validator
             ->requirePresence('image_path')
             ->notEmptyFile('image_path', '商品画像をご用意下さい。');
-        // ->add(
-        //     'image_path',
-        //     [
-        //         'uploadError' => [
-        //             'rule' => ['uploadError'],
-        //             'message' => 'ファイルのアップロードができませんでした。もう一度お試し下さい。',
-        //             'last' => true
-        //         ],
-        //         'fileSize' => [
-        //             'rule' => ['fileSize', '<=', '2000'],
-        //             'message' => '2MB以下のファイルをご用意下さい。'
-        //         ],
-        //         'extension' => [
-        //             'rule' => ['extension', ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG', 'gif', 'GIF']],
-        //             'message' => 'ファイル形式は.jpg/.jpeg/.gif/.pngいずれかでご投稿下さい'
-        //         ],
-        //         'mimeType' => [
-        //             'rule' => ['mimeType', ['image/jpeg', 'image/png', 'image/gif']],
-        //             'message' => 'ファイル形式は.jpg/.jpeg/.gif/.pngいずれかでご投稿下さい',
-        //         ]
-        //     ]
-        // );
+
         return $validator;
     }
 
