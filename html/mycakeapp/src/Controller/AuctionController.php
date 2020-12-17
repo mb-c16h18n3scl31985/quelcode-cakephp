@@ -4,7 +4,11 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Event\Event;
-use Exception;
+
+
+//トランザクション用
+use Cake\Datasource\ConnectionManager;
+use Cake\Core\Configure;
 
 class AuctionController extends AuctionBaseController
 {
@@ -100,40 +104,65 @@ class AuctionController extends AuctionBaseController
     //フォームから送信された値を保存する
     public function add()
     {
-        //Biditemインスタンスを用意
-        $biditem = $this->Biditems->newEntity();
+        $connection = ConnectionManager::get('default');
 
-        if ($this->request->is('post')) {
+        //------------------------トランザクションここから--------------------------
+        try {
+            $connection->begin();
+
+            //Biditemインスタンスを用意
+            $biditem = $this->Biditems->newEntity();
+
             //イメージファイルをcakePHP側に保存
+            if ($this->request->is('post')) {
 
-            //イメージファイル取り出し
-            $file = $this->request->data['image'];
+                //イメージファイル取り出し
+                $file = $this->request->data['image_path'];
 
-            $file_name = date('YmdHis') . $file['name'];
-            $file_path = WWW_ROOT . 'img/biditem_image/' . $file_name;
-            move_uploaded_file($file['tmp_name'], $file_path);
+                //フォームから送られてきたファイルをcheck_file()で保存前にチェックし、
+                //通ればwebroot/img/biditem/imageディレクトリに保存
+                if ($this->check_file($file)) {
+                    $file_name = date('YmdHis') . $file['name'];
+                    $file_path = WWW_ROOT . 'img/biditem_image/' . $file_name;
+                    move_uploaded_file($file['tmp_name'], $file_path);
+                } else {
+                    throw new \Exception(Configure::read("ファイル保存に失敗しました。もう一度投稿してください。"));
+                }
 
-            $data = [
-                'name' => $this->request->getData('name'),
-                'endtime' => $this->request->getData('endtime'),
-                'description' => $this->request->getData('description'),
-                'image_path' => $file_name,
-                'finished' => 0,
-                'user_id' => $this->request->getData('user_id')
-            ];
+                //image_pathだけ代入したらだめなのか???
+                $data = [
+                    'name' => $this->request->getData('name'),
+                    'endtime' => $this->request->getData('endtime'),
+                    'description' => $this->request->getData('description'),
+                    'image_path' => $file_name,
+                    'finished' => 0,
+                    'user_id' => $this->request->getData('user_id')
+                ];
 
-            //Formからの送信内容をデータベースに保存
-            $biditem = $this->Biditems->patchEntity($biditem, $data);
+                //Formからの送信内容をデータベースに保存
+                $biditem = $this->Biditems->patchEntity($biditem, $data);
 
-            //$biditemを保存する
-            if ($this->Biditems->save($biditem)) {
-                $this->Flash->success(__('保存しました。'));
-                return $this->redirect(['action' => 'index']);
+                //$biditemを保存する
+                if ($this->Biditems->save($biditem)) {
+                    $this->Flash->success(__('保存しました。'));
+
+                    //**************トランザクション_コミット****************
+                    $connection->commit();
+                    return $this->redirect(['action' => 'index']);
+                }
+                throw new \Exception(Configure::read("エラー説明"));
             }
-            $this->Flash->error(__('保存に失敗しました。もう一度入力してください。'));
+        } catch (\Exception $error) {
+            $this->Flash->error($error->getMessage());
+
+            //**************トランザクション_ロールバック****************
+            $connection->rollback();
         }
+        //-------------------------トランザクションここまで-------------------------
+
         $this->set(compact('biditem'));
     }
+
 
     //入札
     public function bid($biditem_id = null)
@@ -182,7 +211,7 @@ class AuctionController extends AuctionBaseController
             try {
                 //bidinfo_idからBidinfoを取得する
                 $bidinfo = $this->Bidinfo->get($bidinfo_id, ['contain' => ['Biditems']]);
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 $bidinfo = null;
             }
 
