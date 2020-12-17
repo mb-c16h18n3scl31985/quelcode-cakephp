@@ -101,6 +101,30 @@ class AuctionController extends AuctionBaseController
     }
 
 
+    //画像保存前のチェックを行う関数
+    //$fileにはフォームから送信されたファイルが入れられる
+    public function check_file($file)
+    {
+        $file_path = $file['tmp_name'];
+
+        //ファイルサイズは2MB以下
+        if (filesize($file_path) > 2000000) {
+            throw new \Exception('2MB以下のファイルをご用意下さい。');
+        }
+
+        //mimetypeはjpg,png,gitのいずれか
+        $finfo = new \finfo(FILEINFO_MIME_TYPE);
+        $file_mimetype = $finfo->file($file_path);
+        $config['ALLOW_MIME'] = ['image/jpeg', 'image/png', 'image/gif'];
+
+        //ファイルのmimetypeが$config['ALLOW_MIME']のいずれかに該当するかチェック
+        if (!in_array($file_mimetype, $config['ALLOW_MIME'])) {
+            throw new \Exception('ファイル形式は.jpg/.jpeg/.gif/.pngいずれかでご投稿下さい');
+        }
+        return true;
+    }
+
+
     //フォームから送信された値を保存する
     public function add()
     {
