@@ -152,19 +152,14 @@ class AuctionController extends AuctionBaseController
                     throw new \Exception("ファイル保存に失敗しました。もう一度投稿してください。");
                 }
 
-                //image_pathだけ代入したらだめなのか???
-                // $data = [
-                //     'name' => $this->request->getData('name'),
-                //     'endtime' => $this->request->getData('endtime'),
-                //     'description' => $this->request->getData('description'),
-                //     'image_path' => $file_name,
-                //     'finished' => 0,
-                //     'user_id' => $this->request->getData('user_id')
-                // ];
-
-                $data = $this->request->getData();
-                $data['finished'] = 0;
-                $data['image_path'] = $file_name;
+                $data = [
+                    'name' => $this->request->getData('name'),
+                    'endtime' => $this->request->getData('endtime'),
+                    'description' => $this->request->getData('description'),
+                    'image_path' => $file_name,
+                    'finished' => 0,
+                    'user_id' => $this->request->getData('user_id')
+                ];
 
                 //Formからの送信内容をデータベースに保存
                 $biditem = $this->Biditems->patchEntity($biditem, $data);
