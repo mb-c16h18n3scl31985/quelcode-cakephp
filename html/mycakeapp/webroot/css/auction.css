@@ -27,6 +27,7 @@ nav.sidebar {
 }
 img.biditem_image {
     max-width: 500px;
+    height: auto;
     max-height: 500px;
 }
 div.text-align-center{
