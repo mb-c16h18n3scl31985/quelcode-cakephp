@@ -29,7 +29,7 @@
     </tr>
     <tr>
         <th scope="row">詳細説明</th>
-        <td><?= $biditem->description ?></td>
+        <td><?= nl2br(h($biditem->description)) ?></td>
     </tr>
 </table>
 <div class="related">
