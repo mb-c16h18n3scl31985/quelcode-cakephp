@@ -128,18 +128,17 @@ class AuctionController extends AuctionBaseController
     //フォームから送信された値を保存する
     public function add()
     {
-        $connection = ConnectionManager::get('default');
+        //Biditemインスタンスを用意
+        $biditem = $this->Biditems->newEntity();
 
-        //------------------------トランザクションここから--------------------------
-        try {
-            $connection->begin();
+        //イメージファイルをcakePHP側に保存
+        if ($this->request->is('post')) {
 
-            //Biditemインスタンスを用意
-            $biditem = $this->Biditems->newEntity();
+            $connection = ConnectionManager::get('default');
 
-            //イメージファイルをcakePHP側に保存
-            if ($this->request->is('post')) {
-
+            //------------------------トランザクションここから--------------------------
+            try {
+                $connection->begin();
                 //イメージファイル取り出し
                 $file = $this->request->data['image_path'];
 
@@ -150,18 +149,22 @@ class AuctionController extends AuctionBaseController
                     $file_path = WWW_ROOT . 'img/biditem_image/' . $file_name;
                     move_uploaded_file($file['tmp_name'], $file_path);
                 } else {
-                    throw new \Exception(Configure::read("ファイル保存に失敗しました。もう一度投稿してください。"));
+                    throw new \Exception("ファイル保存に失敗しました。もう一度投稿してください。");
                 }
 
                 //image_pathだけ代入したらだめなのか???
-                $data = [
-                    'name' => $this->request->getData('name'),
-                    'endtime' => $this->request->getData('endtime'),
-                    'description' => $this->request->getData('description'),
-                    'image_path' => $file_name,
-                    'finished' => 0,
-                    'user_id' => $this->request->getData('user_id')
-                ];
+                // $data = [
+                //     'name' => $this->request->getData('name'),
+                //     'endtime' => $this->request->getData('endtime'),
+                //     'description' => $this->request->getData('description'),
+                //     'image_path' => $file_name,
+                //     'finished' => 0,
+                //     'user_id' => $this->request->getData('user_id')
+                // ];
+
+                $data = $this->request->getData();
+                $data['finished'] = 0;
+                $data['image_path'] = $file_name;
 
                 //Formからの送信内容をデータベースに保存
                 $biditem = $this->Biditems->patchEntity($biditem, $data);
@@ -174,17 +177,17 @@ class AuctionController extends AuctionBaseController
                     $connection->commit();
                     return $this->redirect(['action' => 'index']);
                 }
-                throw new \Exception(Configure::read("エラー説明"));
+                throw new \Exception("エラー説明");
+            } catch (\Exception $error) {
+                $this->Flash->error($error->getMessage());
+
+                //**************トランザクション_ロールバック****************
+                $connection->rollback();
             }
-        } catch (\Exception $error) {
-            $this->Flash->error($error->getMessage());
+            //-------------------------トランザクションここまで-------------------------
 
-            //**************トランザクション_ロールバック****************
-            $connection->rollback();
+            $this->set(compact('biditem'));
         }
-        //-------------------------トランザクションここまで-------------------------
-
-        $this->set(compact('biditem'));
     }
 
 
