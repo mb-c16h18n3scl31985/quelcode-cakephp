@@ -172,7 +172,7 @@ class AuctionController extends AuctionBaseController
                     $connection->commit();
                     return $this->redirect(['action' => 'index']);
                 }
-                throw new \Exception("エラー説明");
+                throw new \Exception("ファイル保存に失敗しました。もう一度投稿してください。");
             } catch (\Exception $error) {
                 $this->Flash->error($error->getMessage());
 
