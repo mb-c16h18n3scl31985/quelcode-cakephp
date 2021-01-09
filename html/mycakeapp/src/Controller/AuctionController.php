@@ -130,6 +130,7 @@ class AuctionController extends AuctionBaseController
     {
         //Biditemインスタンスを用意
         $biditem = $this->Biditems->newEntity();
+        var_dump($biditem);
 
         //イメージファイルをcakePHP側に保存
         if ($this->request->is('post')) {
@@ -180,9 +181,8 @@ class AuctionController extends AuctionBaseController
                 $connection->rollback();
             }
             //-------------------------トランザクションここまで-------------------------
-
-            $this->set(compact('biditem'));
         }
+        $this->set(compact('biditem'));
     }
 
 
