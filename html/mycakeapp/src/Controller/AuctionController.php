@@ -130,15 +130,13 @@ class AuctionController extends AuctionBaseController
     {
         //Biditemインスタンスを用意
         $biditem = $this->Biditems->newEntity();
-
+        $connection = ConnectionManager::get('default');
 
         //------------------------トランザクションここから--------------------------
         try {
 
             //イメージファイルをcakePHP側に保存
             if ($this->request->is('post')) {
-
-                $connection = ConnectionManager::get('default');
 
                 $connection->begin();
                 //イメージファイル取り出し
@@ -175,7 +173,7 @@ class AuctionController extends AuctionBaseController
                     return $this->redirect(['action' => 'index']);
                 }
             }
-            throw new \Exception("ファイル保存に失敗しました。もう一度投稿してください。");
+            //throw new \Exception("ファイル保存に失敗しました。もう一度投稿してください。");
         } catch (\Exception $error) {
             $this->Flash->error($error->getMessage());
 
