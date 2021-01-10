@@ -130,14 +130,14 @@ class AuctionController extends AuctionBaseController
     {
         //Biditemインスタンスを用意
         $biditem = $this->Biditems->newEntity();
-        $connection = ConnectionManager::get('default');
 
-        //------------------------トランザクションここから--------------------------
-        try {
+        //イメージファイルをcakePHP側に保存
+        if ($this->request->is('post')) {
 
-            //イメージファイルをcakePHP側に保存
-            if ($this->request->is('post')) {
+            try {
+                $connection = ConnectionManager::get('default');
 
+                //------------------------トランザクションここから--------------------------
                 $connection->begin();
                 //イメージファイル取り出し
                 $file = $this->request->data['image_path'];
@@ -172,12 +172,12 @@ class AuctionController extends AuctionBaseController
                     $connection->commit();
                     return $this->redirect(['action' => 'index']);
                 }
-            }
-        } catch (\Exception $error) {
-            $this->Flash->error($error->getMessage());
+            } catch (\Exception $error) {
+                $this->Flash->error($error->getMessage());
 
-            //**************トランザクション_ロールバック****************
-            $connection->rollback();
+                //**************トランザクション_ロールバック****************
+                $connection->rollback();
+            }
         }
         //-------------------------トランザクションここまで-------------------------
         $this->set(compact('biditem'));
